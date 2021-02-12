@@ -21,7 +21,7 @@ page.links.each do |link|
 end
 
 def get_magic_town(query, page)
-  page.xpath(query).inner_text.gsub(/\s{2,}/, '')
+  page.xpath(query).inner_text.gsub(/(\s{3,})(Inicio de sesión)(\s{3,})/, '')
 end
 
 
